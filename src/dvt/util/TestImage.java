@@ -48,13 +48,13 @@ public class TestImage {
      */  
     public static void main(String[] args) throws ParseException {  
     	String dir = System.getProperty("user.dir");
-    	//exportImg1("请输入验证码图片中蓝色文字",dir+"\\yzm_pic\\yzm_ms.jpeg");
-    	//exportImg1_snapshot("请输入",dir+"\\yzm_pic\\yzm_ms.jpeg",45);
-    	//exportImg1_snapshot("文字",dir+"\\yzm_pic\\yzm_ms2.jpeg",30);
-    	String[] paths = {"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms1.jpeg",
-    			"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms2.jpeg",
-    			"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms3.jpeg"};
-    	ImageHandleHelper.mergeImage(paths, 1, dir+"\\yzm_pic\\yzm_out.jpeg");
+    	//exportImg1("请输入验证码图片中蓝色文字",dir+"\\yzm_pic\\yzmmsA.jpeg");
+    	exportImg1_snapshot("请输入",dir+"\\yzm_pic\\yzmmsA.jpeg",45);
+    	exportImg1_snapshot("文字",dir+"\\yzm_pic\\yzmmsB.jpeg",30);
+//    	String[] paths = {"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms1.jpeg",
+//    			"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms2.jpeg",
+//    			"E:\\Program Files\\apache-tomcat-8.0.41\\webapps\\SaxService\\yzm_pic\\yzm_ms3.jpeg"};
+//    	ImageHandleHelper.mergeImage(paths, 1, dir+"\\yzm_pic\\yzm_out.jpeg");
     	//ImageHandleHelper.overlapImage(dir+"\\yzm_pic\\yzm_ms.jpeg", dir+"\\yzm_pic\\yzm.png", dir+"\\yzm_pic\\union.jpeg");
     	//exportImg2("######","d://yzm.jpeg");  
     }  
