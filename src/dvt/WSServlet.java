@@ -20,7 +20,7 @@ public class WSServlet extends GenericServlet {
 		super.init(servletConfig);  
         System.out.println("准备启动WebService服务");  
         //发布一个WebService  4改95
-        Endpoint.publish("http://localhost:9001/saxServer", new SaxServiceImpl());  
+        Endpoint.publish("http://101.201.75.114:9001/saxServer", new SaxServiceImpl());  
         System.out.println("已成功启动WebService服务"); 
 	}
 

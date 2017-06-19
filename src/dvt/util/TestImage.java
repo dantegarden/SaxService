@@ -115,7 +115,7 @@ public class TestImage {
     
     public static void exportImg1_snapshot(String words,String path,int pwitdh){  
         int width = pwitdh;     
-        int height = 25;     
+        int height = 22;     
         String s = words;     
              
         File file = new File(path);     

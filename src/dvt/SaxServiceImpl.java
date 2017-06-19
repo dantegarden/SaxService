@@ -41,50 +41,50 @@ import dvt.util.TestImage;
 @WebService
 public class SaxServiceImpl implements SaxService{
 	
-	public static final String contextDir = "E://Program Files//apache-tomcat-8.0.41//webapps//SaxService";
-	public static final String filepath = contextDir+ "//yzm_pic//yzm"; // 验证码图片
-	public static final String filepath2 = contextDir + "//yzm_pic//yzm_ms";// 验证码要求
-	public static final String fileoutpath = contextDir + "//yzm_pic//union"; // 拼好的验证码+要求
-	public static final String fileyzmmsA = contextDir+"//yzm_pic//yzmmsA.jpeg";
-	public static final String fileyzmmsB = contextDir+"//yzm_pic//yzmmsB.jpeg";
+//	public static final String contextDir = "E://Program Files//apache-tomcat-8.0.41//webapps//SaxService";
+//	public static final String filepath = contextDir+ "//yzm_pic//yzm"; // 验证码图片
+//	public static final String filepath2 = contextDir + "//yzm_pic//yzm_ms";// 验证码要求
+//	public static final String fileoutpath = contextDir + "//yzm_pic//union"; // 拼好的验证码+要求
+//	public static final String fileyzmmsA = contextDir+"//yzm_pic//yzmmsA.jpeg";
+//	public static final String fileyzmmsB = contextDir+"//yzm_pic//yzmmsB.jpeg";
+//	
+//	//使用超级鹰的账号密码信息
+//	public static final String username = "dantegarden";
+//	public static final String password = "10121118Dante";
+//	public static final String machineCode = "1234";// 数字，随便写
+//	public static final String codeType = "6004";// 写死6004
+	
+	public static final String contextDir;
+	public static final String filepath; // 验证码图片
+	public static final String filepath2;// 验证码要求
+	public static final String fileoutpath; // 拼好的验证码+要求
+	public static final String fileyzmmsA;
+	public static final String fileyzmmsB;
 	
 	//使用超级鹰的账号密码信息
-	public static final String username = "dantegarden";
-	public static final String password = "10121118Dante";
-	public static final String machineCode = "1234";// 数字，随便写
-	public static final String codeType = "6004";// 写死6004
-	
-//	public static final String contextDir;
-//	public static final String filepath; // 验证码图片
-//	public static final String filepath2;// 验证码要求
-//	public static final String fileoutpath; // 拼好的验证码+要求
-//	public static final String fileyzmmsA;
-//	public static final String fileyzmmsB;
-	
-//	//使用超级鹰的账号密码信息
-//	public static final String username;
-//	public static final String password;
-//	public static final String machineCode;// 数字，随便写
-//	public static final String codeType;// 写死6004
-//
-//	static{
-//		Properties prop = new Properties();
-//		try {
-//			prop.load(SaxServiceImpl.class.getResourceAsStream("deploy.properties"));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		username = prop.getProperty("chaojiying.username");
-//		password = prop.getProperty("chaojiying.password");
-//		machineCode = prop.getProperty("chaojiying.machineCode");
-//		codeType = prop.getProperty("chaojiying.codeType");
-//		contextDir=prop.getProperty("contextDir");
-//		filepath = contextDir + prop.getProperty("yzm.path");
-//		filepath2 = contextDir + prop.getProperty("yzm.yqpath");
-//		fileoutpath = contextDir + prop.getProperty("yzm.unionpath");
-//		fileyzmmsA = contextDir + prop.getProperty("yzm.msA");
-//		fileyzmmsB = contextDir+ prop.getProperty("yzm.msB");
-//	}
+	public static final String username;
+	public static final String password;
+	public static final String machineCode;// 数字，随便写
+	public static final String codeType;// 写死6004
+
+	static{
+		Properties prop = new Properties();
+		try {
+			prop.load(SaxServiceImpl.class.getResourceAsStream("deploy.properties"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		username = prop.getProperty("chaojiying.username");
+		password = prop.getProperty("chaojiying.password");
+		machineCode = prop.getProperty("chaojiying.machineCode");
+		codeType = prop.getProperty("chaojiying.codeType");
+		contextDir=prop.getProperty("contextDir");
+		filepath = contextDir + prop.getProperty("yzm.path");
+		filepath2 = contextDir + prop.getProperty("yzm.yqpath");
+		fileoutpath = contextDir + prop.getProperty("yzm.unionpath");
+		fileyzmmsA = contextDir + prop.getProperty("yzm.msA");
+		fileyzmmsB = contextDir+ prop.getProperty("yzm.msB");
+	}
 	
 	
 	@WebMethod
@@ -113,11 +113,11 @@ public class SaxServiceImpl implements SaxService{
 			final String tableid = "tabPage2";
 			//火狐浏览器位置
 			System.setProperty("webdriver.firefox.bin",
-					"D://Program Files (x86)//Mozilla Firefox_47.01//firefox.exe");//"/usr/bin/firefox"  ///usr/lib64/firefox/firefox  //改/usr/bin/firefox  
+					"/usr/bin/firefox");//"/usr/bin/firefox"  ///usr/lib64/firefox/firefox  //改/usr/bin/firefox  
 			//驱动器位置
 			System.setProperty("webdriver.firefox.marionette",
-					contextDir + "/driver/geckodriver.exe"); //改exe
-			System.out.println(contextDir + "/driver/geckodriver.exe"); //改exe
+					contextDir + "/driver/geckodriver"); //改exe
+			System.out.println(contextDir + "/driver/geckodriver"); //改exe
 			WebDriver driver = new FirefoxDriver();
 			driver.manage().window().maximize();// 窗口最大化
 			try {

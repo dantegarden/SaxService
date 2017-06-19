@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>  
         <div>  
   	      <h1>java WebService</h1>  
-          <a href="http://192.168.1.95:9001/saxServer?wsdl">点此处访问WSDL</a>  
+          <a href="http://101.201.75.114:9001/saxServer?wsdl">点此处访问WSDL</a>  
         </div>  
   </body>
 </html>
