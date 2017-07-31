@@ -113,7 +113,7 @@ public class SaxServiceImpl implements SaxService{
 			final String tableid = "tabPage2";
 			//火狐浏览器位置
 			System.setProperty("webdriver.firefox.bin",
-					"/usr/bin/firefox");//"/usr/bin/firefox"  ///usr/lib64/firefox/firefox  //改/usr/bin/firefox  
+					"/usr/bin/firefox");//  ///usr/lib64/firefox/firefox  //改/usr/bin/firefox  "D://Program Files (x86)//Mozilla Firefox_47.01//firefox.exe"
 			//驱动器位置
 			System.setProperty("webdriver.firefox.marionette",
 					contextDir + "/driver/geckodriver"); //改exe
@@ -206,6 +206,8 @@ public class SaxServiceImpl implements SaxService{
 						SeleniumUtils.snapshot(driver, yzm_img, yzm_filepath);
 						if(yzminfoFont!=null){
 							SeleniumUtils.snapshot(driver, yzminfoFont, yzm_filepath2);
+//							TestImage.exportImg1_snapshot("请输入",fileyzmmsA,45);
+//							TestImage.exportImg1_snapshot("文字",fileyzmmsB,30);
 							String[] tPaths = {fileyzmmsA,yzm_filepath2,fileyzmmsB};
 							ImageHandleHelper.mergeImage(tPaths, 1, yzm_filepath2);
 						}else{
